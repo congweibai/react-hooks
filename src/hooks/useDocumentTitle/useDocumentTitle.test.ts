@@ -1,5 +1,6 @@
 import { renderHook } from "@testing-library/react-hooks";
 import useDocumentTitle from "./useDocumentTitle";
+import { describe, it, expect } from "vitest";
 
 describe("useDocumentTitle", () => {
   it("should set document title correctly", () => {

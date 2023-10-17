@@ -6,3 +6,4 @@ export * from "./useCounter/useCounter";
 export * from "./usePreferredLanguage/usePreferredLanguage";
 export * from "./useHover/useHover";
 export * from "./useFavicon/useFavicon";
+export * from "./useQueue/useQueue";

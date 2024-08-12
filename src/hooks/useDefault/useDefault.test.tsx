@@ -1,6 +1,7 @@
 import { describe, it, expect } from "vitest";
-import { renderHook, act } from "@testing-library/react";
+import { act } from "@testing-library/react";
 import useDefault from "./useDefault"; // Import your useDefault hook
+import { renderHook } from "@testing-library/react-hooks";
 describe("TestComponent", () => {
   it("should initialize with the default value", () => {
     const { result } = renderHook(

@@ -1,4 +1,5 @@
-import { useSyncExternalStore } from "react";
+// this requires react 18
+// import { useSyncExternalStore } from "react";
 
 const subscribe = (cb: () => void) => {
   window.addEventListener("languagechange", cb);
@@ -13,6 +14,6 @@ const getServerSnapshot = () => {
   throw Error("usePreferredLanguage is a clinet-side only hook.");
 };
 
-export default function usePreferredLanguage() {
-  return useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
-}
+// export default function usePreferredLanguage() {
+//   return useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+// }

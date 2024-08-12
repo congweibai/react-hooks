@@ -1,6 +1,7 @@
 import { afterEach, describe, expect, it, test, vitest } from "vitest";
 import useCopyToClipboard from "./useCopyToClipboard";
-import { act, renderHook, waitFor } from "@testing-library/react";
+import { act, waitFor } from "@testing-library/react";
+import { renderHook } from "@testing-library/react-hooks";
 
 document.execCommand = vitest.fn();
 describe("useCopyToClipboard", () => {

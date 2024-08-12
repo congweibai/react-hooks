@@ -1,7 +1,7 @@
-import { renderHook } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import useQueue from "./useQueue";
 import { act } from "react-dom/test-utils";
+import { renderHook } from "@testing-library/react-hooks";
 
 describe("useQueue", () => {
   it("should accept an `initialValue` argument that will be used to initialize the `queue`", () => {

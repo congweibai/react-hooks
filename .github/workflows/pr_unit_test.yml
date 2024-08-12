@@ -1,0 +1,29 @@
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+    branches: ["master"]
+
+name: Run Automate Test on every Pull Request
+jobs:
+  build:
+    name: Run Automate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
+      - name: Use Node.js 18.20.4
+        uses: actions/setup-node@v1
+        with:
+          node-version: 18.20.4
+      - name: Cache node_modules
+        id: cache-modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-build-${{ hashFiles('package.json') }}
+      - name: Install Dependencies
+        if: steps.cache-modules.outputs.cache-hit != 'true'
+        run: npm install
+      - name: Run test
+        run: npm test

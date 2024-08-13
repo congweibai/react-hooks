@@ -9,3 +9,4 @@ export * from "./useFavicon/useFavicon";
 export * from "./useQueue/useQueue";
 export * from "./useTimeout";
 export * from "./useWindowSize";
+export * from "./useVisibilityChange";

@@ -13,3 +13,4 @@ export * from "./useVisibilityChange";
 export * from "./useObjectState";
 export * from "./useDebounce";
 export * from "./useHistoryState";
+export * from "./useBattery";

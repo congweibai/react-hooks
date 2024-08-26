@@ -14,3 +14,4 @@ export * from "./useObjectState";
 export * from "./useDebounce";
 export * from "./useHistoryState";
 export * from "./useBattery";
+export * from "./useThrottle";
